@@ -1,0 +1,20 @@
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Service\bin\Service.dll.config
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Service\bin\Service.dll
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Service\bin\Service.pdb
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Service\bin\EntityFramework.dll
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Service\bin\EntityFramework.SqlServer.dll
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Service\bin\EntityFramework.xml
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Service\bin\EntityFramework.SqlServer.xml
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Service\obj\Debug\Service.dll
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Service\obj\Debug\Service.pdb
+C:\Users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Service\obj\Debug\Service.dll
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Service\obj\Debug\Service.pdb
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Service\bin\Service.dll.config
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Service\bin\Service.dll
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Service\bin\Service.pdb
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Service\bin\EntityFramework.dll
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Service\bin\EntityFramework.SqlServer.dll
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Service\bin\EntityFramework.xml
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Service\bin\EntityFramework.SqlServer.xml

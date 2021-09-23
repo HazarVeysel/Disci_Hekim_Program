@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IsimGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsimGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsimGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Soyad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SoyadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoyadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TelGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TelGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TelGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MailGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MailGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MailGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YasGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YasGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="YasGetirResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CinsyetGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CinsyetGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CinsyetGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IDGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IDGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IDGetirResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DurumGuncelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="durum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DurumGuncelleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsimGetirResepsiyon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsimGetirResepsiyonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsimGetirResepsiyonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SoyadGetirResepsiyon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SoyadGetirResepsiyonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SoyadGetirResepsiyonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCGetirResepsiyon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCGetirResepsiyonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCGetirResepsiyonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HastaListele">
+        <s:complexType />
+      </s:element>
+      <s:element name="HastaListeleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HastaListeleResult" type="tns:ArrayOfHastalar" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfHastalar">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Hastalar" nillable="true" type="tns:Hastalar" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Hastalar">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HastaID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HekimID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HastaAd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HastaSoyad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Durum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Yas" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cinsiyet" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HastaListeleTCGore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HastaListeleTCGoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HastaListeleTCGoreResult" type="tns:ArrayOfHastalar" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HastaEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hastad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hastasoyad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="durum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="yas" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cinsiyet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HastaEkleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="HastaGuncelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="hastad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hastasoyad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="durum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="yas" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cinsiyet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HastaGuncelleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="hastasil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hastasilResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="hekimegonder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="hekimid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hekimegonderResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IsimGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:IsimGetir" />
+  </wsdl:message>
+  <wsdl:message name="IsimGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:IsimGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="SoyadSoapIn">
+    <wsdl:part name="parameters" element="tns:Soyad" />
+  </wsdl:message>
+  <wsdl:message name="SoyadSoapOut">
+    <wsdl:part name="parameters" element="tns:SoyadResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:TCGetir" />
+  </wsdl:message>
+  <wsdl:message name="TCGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:TCGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="TelGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:TelGetir" />
+  </wsdl:message>
+  <wsdl:message name="TelGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:TelGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="MailGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:MailGetir" />
+  </wsdl:message>
+  <wsdl:message name="MailGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:MailGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="YasGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:YasGetir" />
+  </wsdl:message>
+  <wsdl:message name="YasGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:YasGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="CinsyetGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:CinsyetGetir" />
+  </wsdl:message>
+  <wsdl:message name="CinsyetGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:CinsyetGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:IDGetir" />
+  </wsdl:message>
+  <wsdl:message name="IDGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:IDGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="DurumGuncelleSoapIn">
+    <wsdl:part name="parameters" element="tns:DurumGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="DurumGuncelleSoapOut">
+    <wsdl:part name="parameters" element="tns:DurumGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsimGetirResepsiyonSoapIn">
+    <wsdl:part name="parameters" element="tns:IsimGetirResepsiyon" />
+  </wsdl:message>
+  <wsdl:message name="IsimGetirResepsiyonSoapOut">
+    <wsdl:part name="parameters" element="tns:IsimGetirResepsiyonResponse" />
+  </wsdl:message>
+  <wsdl:message name="SoyadGetirResepsiyonSoapIn">
+    <wsdl:part name="parameters" element="tns:SoyadGetirResepsiyon" />
+  </wsdl:message>
+  <wsdl:message name="SoyadGetirResepsiyonSoapOut">
+    <wsdl:part name="parameters" element="tns:SoyadGetirResepsiyonResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCGetirResepsiyonSoapIn">
+    <wsdl:part name="parameters" element="tns:TCGetirResepsiyon" />
+  </wsdl:message>
+  <wsdl:message name="TCGetirResepsiyonSoapOut">
+    <wsdl:part name="parameters" element="tns:TCGetirResepsiyonResponse" />
+  </wsdl:message>
+  <wsdl:message name="HastaListeleSoapIn">
+    <wsdl:part name="parameters" element="tns:HastaListele" />
+  </wsdl:message>
+  <wsdl:message name="HastaListeleSoapOut">
+    <wsdl:part name="parameters" element="tns:HastaListeleResponse" />
+  </wsdl:message>
+  <wsdl:message name="HastaListeleTCGoreSoapIn">
+    <wsdl:part name="parameters" element="tns:HastaListeleTCGore" />
+  </wsdl:message>
+  <wsdl:message name="HastaListeleTCGoreSoapOut">
+    <wsdl:part name="parameters" element="tns:HastaListeleTCGoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="HastaEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:HastaEkle" />
+  </wsdl:message>
+  <wsdl:message name="HastaEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:HastaEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="HastaGuncelleSoapIn">
+    <wsdl:part name="parameters" element="tns:HastaGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="HastaGuncelleSoapOut">
+    <wsdl:part name="parameters" element="tns:HastaGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="hastasilSoapIn">
+    <wsdl:part name="parameters" element="tns:hastasil" />
+  </wsdl:message>
+  <wsdl:message name="hastasilSoapOut">
+    <wsdl:part name="parameters" element="tns:hastasilResponse" />
+  </wsdl:message>
+  <wsdl:message name="hekimegonderSoapIn">
+    <wsdl:part name="parameters" element="tns:hekimegonder" />
+  </wsdl:message>
+  <wsdl:message name="hekimegonderSoapOut">
+    <wsdl:part name="parameters" element="tns:hekimegonderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HastaSoap">
+    <wsdl:operation name="IsimGetir">
+      <wsdl:input message="tns:IsimGetirSoapIn" />
+      <wsdl:output message="tns:IsimGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Soyad">
+      <wsdl:input message="tns:SoyadSoapIn" />
+      <wsdl:output message="tns:SoyadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCGetir">
+      <wsdl:input message="tns:TCGetirSoapIn" />
+      <wsdl:output message="tns:TCGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TelGetir">
+      <wsdl:input message="tns:TelGetirSoapIn" />
+      <wsdl:output message="tns:TelGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MailGetir">
+      <wsdl:input message="tns:MailGetirSoapIn" />
+      <wsdl:output message="tns:MailGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YasGetir">
+      <wsdl:input message="tns:YasGetirSoapIn" />
+      <wsdl:output message="tns:YasGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CinsyetGetir">
+      <wsdl:input message="tns:CinsyetGetirSoapIn" />
+      <wsdl:output message="tns:CinsyetGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IDGetir">
+      <wsdl:input message="tns:IDGetirSoapIn" />
+      <wsdl:output message="tns:IDGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DurumGuncelle">
+      <wsdl:input message="tns:DurumGuncelleSoapIn" />
+      <wsdl:output message="tns:DurumGuncelleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsimGetirResepsiyon">
+      <wsdl:input message="tns:IsimGetirResepsiyonSoapIn" />
+      <wsdl:output message="tns:IsimGetirResepsiyonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SoyadGetirResepsiyon">
+      <wsdl:input message="tns:SoyadGetirResepsiyonSoapIn" />
+      <wsdl:output message="tns:SoyadGetirResepsiyonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCGetirResepsiyon">
+      <wsdl:input message="tns:TCGetirResepsiyonSoapIn" />
+      <wsdl:output message="tns:TCGetirResepsiyonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HastaListele">
+      <wsdl:input message="tns:HastaListeleSoapIn" />
+      <wsdl:output message="tns:HastaListeleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HastaListeleTCGore">
+      <wsdl:input message="tns:HastaListeleTCGoreSoapIn" />
+      <wsdl:output message="tns:HastaListeleTCGoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HastaEkle">
+      <wsdl:input message="tns:HastaEkleSoapIn" />
+      <wsdl:output message="tns:HastaEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HastaGuncelle">
+      <wsdl:input message="tns:HastaGuncelleSoapIn" />
+      <wsdl:output message="tns:HastaGuncelleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hastasil">
+      <wsdl:input message="tns:hastasilSoapIn" />
+      <wsdl:output message="tns:hastasilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hekimegonder">
+      <wsdl:input message="tns:hekimegonderSoapIn" />
+      <wsdl:output message="tns:hekimegonderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HastaSoap" type="tns:HastaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsimGetir">
+      <soap:operation soapAction="http://tempuri.org/IsimGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Soyad">
+      <soap:operation soapAction="http://tempuri.org/Soyad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCGetir">
+      <soap:operation soapAction="http://tempuri.org/TCGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelGetir">
+      <soap:operation soapAction="http://tempuri.org/TelGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailGetir">
+      <soap:operation soapAction="http://tempuri.org/MailGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YasGetir">
+      <soap:operation soapAction="http://tempuri.org/YasGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CinsyetGetir">
+      <soap:operation soapAction="http://tempuri.org/CinsyetGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDGetir">
+      <soap:operation soapAction="http://tempuri.org/IDGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DurumGuncelle">
+      <soap:operation soapAction="http://tempuri.org/DurumGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsimGetirResepsiyon">
+      <soap:operation soapAction="http://tempuri.org/IsimGetirResepsiyon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SoyadGetirResepsiyon">
+      <soap:operation soapAction="http://tempuri.org/SoyadGetirResepsiyon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCGetirResepsiyon">
+      <soap:operation soapAction="http://tempuri.org/TCGetirResepsiyon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HastaListele">
+      <soap:operation soapAction="http://tempuri.org/HastaListele" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HastaListeleTCGore">
+      <soap:operation soapAction="http://tempuri.org/HastaListeleTCGore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HastaEkle">
+      <soap:operation soapAction="http://tempuri.org/HastaEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HastaGuncelle">
+      <soap:operation soapAction="http://tempuri.org/HastaGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hastasil">
+      <soap:operation soapAction="http://tempuri.org/hastasil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hekimegonder">
+      <soap:operation soapAction="http://tempuri.org/hekimegonder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HastaSoap12" type="tns:HastaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsimGetir">
+      <soap12:operation soapAction="http://tempuri.org/IsimGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Soyad">
+      <soap12:operation soapAction="http://tempuri.org/Soyad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCGetir">
+      <soap12:operation soapAction="http://tempuri.org/TCGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TelGetir">
+      <soap12:operation soapAction="http://tempuri.org/TelGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailGetir">
+      <soap12:operation soapAction="http://tempuri.org/MailGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YasGetir">
+      <soap12:operation soapAction="http://tempuri.org/YasGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CinsyetGetir">
+      <soap12:operation soapAction="http://tempuri.org/CinsyetGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDGetir">
+      <soap12:operation soapAction="http://tempuri.org/IDGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DurumGuncelle">
+      <soap12:operation soapAction="http://tempuri.org/DurumGuncelle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsimGetirResepsiyon">
+      <soap12:operation soapAction="http://tempuri.org/IsimGetirResepsiyon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SoyadGetirResepsiyon">
+      <soap12:operation soapAction="http://tempuri.org/SoyadGetirResepsiyon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCGetirResepsiyon">
+      <soap12:operation soapAction="http://tempuri.org/TCGetirResepsiyon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HastaListele">
+      <soap12:operation soapAction="http://tempuri.org/HastaListele" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HastaListeleTCGore">
+      <soap12:operation soapAction="http://tempuri.org/HastaListeleTCGore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HastaEkle">
+      <soap12:operation soapAction="http://tempuri.org/HastaEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HastaGuncelle">
+      <soap12:operation soapAction="http://tempuri.org/HastaGuncelle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hastasil">
+      <soap12:operation soapAction="http://tempuri.org/hastasil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hekimegonder">
+      <soap12:operation soapAction="http://tempuri.org/hekimegonder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Hasta">
+    <wsdl:port name="HastaSoap" binding="tns:HastaSoap">
+      <soap:address location="http://localhost:65390/Hasta.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HastaSoap12" binding="tns:HastaSoap12">
+      <soap12:address location="http://localhost:65390/Hasta.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

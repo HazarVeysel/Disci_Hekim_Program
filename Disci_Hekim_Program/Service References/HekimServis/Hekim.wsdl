@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IsimGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kadi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sifre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsimGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsimGetirResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HekimIDGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kadi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sifre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HekimIDGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HekimIDGetirResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HekimleriGetir">
+        <s:complexType />
+      </s:element>
+      <s:element name="HekimleriGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HekimleriGetirResult" type="tns:ArrayOfHekimListe" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfHekimListe">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HekimListe" nillable="true" type="tns:HekimListe" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HekimListe">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HekimID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HekimAd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HekimSoyad" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="hekimekle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="soyad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hekimekleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="hekimguncelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="soyad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hekimguncelleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="hekimsil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hekimsilResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IsimGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:IsimGetir" />
+  </wsdl:message>
+  <wsdl:message name="IsimGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:IsimGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="HekimIDGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:HekimIDGetir" />
+  </wsdl:message>
+  <wsdl:message name="HekimIDGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:HekimIDGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="HekimleriGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:HekimleriGetir" />
+  </wsdl:message>
+  <wsdl:message name="HekimleriGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:HekimleriGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="hekimekleSoapIn">
+    <wsdl:part name="parameters" element="tns:hekimekle" />
+  </wsdl:message>
+  <wsdl:message name="hekimekleSoapOut">
+    <wsdl:part name="parameters" element="tns:hekimekleResponse" />
+  </wsdl:message>
+  <wsdl:message name="hekimguncelleSoapIn">
+    <wsdl:part name="parameters" element="tns:hekimguncelle" />
+  </wsdl:message>
+  <wsdl:message name="hekimguncelleSoapOut">
+    <wsdl:part name="parameters" element="tns:hekimguncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="hekimsilSoapIn">
+    <wsdl:part name="parameters" element="tns:hekimsil" />
+  </wsdl:message>
+  <wsdl:message name="hekimsilSoapOut">
+    <wsdl:part name="parameters" element="tns:hekimsilResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HekimSoap">
+    <wsdl:operation name="IsimGetir">
+      <wsdl:input message="tns:IsimGetirSoapIn" />
+      <wsdl:output message="tns:IsimGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HekimIDGetir">
+      <wsdl:input message="tns:HekimIDGetirSoapIn" />
+      <wsdl:output message="tns:HekimIDGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HekimleriGetir">
+      <wsdl:input message="tns:HekimleriGetirSoapIn" />
+      <wsdl:output message="tns:HekimleriGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hekimekle">
+      <wsdl:input message="tns:hekimekleSoapIn" />
+      <wsdl:output message="tns:hekimekleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hekimguncelle">
+      <wsdl:input message="tns:hekimguncelleSoapIn" />
+      <wsdl:output message="tns:hekimguncelleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hekimsil">
+      <wsdl:input message="tns:hekimsilSoapIn" />
+      <wsdl:output message="tns:hekimsilSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HekimSoap" type="tns:HekimSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsimGetir">
+      <soap:operation soapAction="http://tempuri.org/IsimGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HekimIDGetir">
+      <soap:operation soapAction="http://tempuri.org/HekimIDGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HekimleriGetir">
+      <soap:operation soapAction="http://tempuri.org/HekimleriGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hekimekle">
+      <soap:operation soapAction="http://tempuri.org/hekimekle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hekimguncelle">
+      <soap:operation soapAction="http://tempuri.org/hekimguncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hekimsil">
+      <soap:operation soapAction="http://tempuri.org/hekimsil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HekimSoap12" type="tns:HekimSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsimGetir">
+      <soap12:operation soapAction="http://tempuri.org/IsimGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HekimIDGetir">
+      <soap12:operation soapAction="http://tempuri.org/HekimIDGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HekimleriGetir">
+      <soap12:operation soapAction="http://tempuri.org/HekimleriGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hekimekle">
+      <soap12:operation soapAction="http://tempuri.org/hekimekle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hekimguncelle">
+      <soap12:operation soapAction="http://tempuri.org/hekimguncelle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hekimsil">
+      <soap12:operation soapAction="http://tempuri.org/hekimsil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Hekim">
+    <wsdl:port name="HekimSoap" binding="tns:HekimSoap">
+      <soap:address location="http://localhost:65390/Hekim.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HekimSoap12" binding="tns:HekimSoap12">
+      <soap12:address location="http://localhost:65390/Hekim.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

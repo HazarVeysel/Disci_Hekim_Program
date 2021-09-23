@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RandevuListele">
+        <s:complexType />
+      </s:element>
+      <s:element name="RandevuListeleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RandevuListeleResult" type="tns:ArrayOfRandevu" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRandevu">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Randevu" nillable="true" type="tns:Randevu" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Randevu">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RandevuID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HastaID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HekimID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HastaAdi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HastaSoyad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RandevuTarih" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RandevuSaat" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="KisiGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KisiGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KisiGetirResult" type="tns:ArrayOfRandevu" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RandevuEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="hastaid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="hekimid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tarih" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="saat" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RandevuEkleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RandevuFiltrele">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tarih" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RandevuFiltreleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RandevuFiltreleResult" type="tns:ArrayOfRandevu" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RandevuGuncelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="hastaid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="hekimid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="randevutarih" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="randevusaat" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RandevuGuncelleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RandevuSil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RandevuSilResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="hekimata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="randid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="hekimid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="hekimataResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RandevuListeleSoapIn">
+    <wsdl:part name="parameters" element="tns:RandevuListele" />
+  </wsdl:message>
+  <wsdl:message name="RandevuListeleSoapOut">
+    <wsdl:part name="parameters" element="tns:RandevuListeleResponse" />
+  </wsdl:message>
+  <wsdl:message name="KisiGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:KisiGetir" />
+  </wsdl:message>
+  <wsdl:message name="KisiGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:KisiGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="RandevuEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:RandevuEkle" />
+  </wsdl:message>
+  <wsdl:message name="RandevuEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:RandevuEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="RandevuFiltreleSoapIn">
+    <wsdl:part name="parameters" element="tns:RandevuFiltrele" />
+  </wsdl:message>
+  <wsdl:message name="RandevuFiltreleSoapOut">
+    <wsdl:part name="parameters" element="tns:RandevuFiltreleResponse" />
+  </wsdl:message>
+  <wsdl:message name="RandevuGuncelleSoapIn">
+    <wsdl:part name="parameters" element="tns:RandevuGuncelle" />
+  </wsdl:message>
+  <wsdl:message name="RandevuGuncelleSoapOut">
+    <wsdl:part name="parameters" element="tns:RandevuGuncelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="RandevuSilSoapIn">
+    <wsdl:part name="parameters" element="tns:RandevuSil" />
+  </wsdl:message>
+  <wsdl:message name="RandevuSilSoapOut">
+    <wsdl:part name="parameters" element="tns:RandevuSilResponse" />
+  </wsdl:message>
+  <wsdl:message name="hekimataSoapIn">
+    <wsdl:part name="parameters" element="tns:hekimata" />
+  </wsdl:message>
+  <wsdl:message name="hekimataSoapOut">
+    <wsdl:part name="parameters" element="tns:hekimataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RandevuIslemleriSoap">
+    <wsdl:operation name="RandevuListele">
+      <wsdl:input message="tns:RandevuListeleSoapIn" />
+      <wsdl:output message="tns:RandevuListeleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KisiGetir">
+      <wsdl:input message="tns:KisiGetirSoapIn" />
+      <wsdl:output message="tns:KisiGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RandevuEkle">
+      <wsdl:input message="tns:RandevuEkleSoapIn" />
+      <wsdl:output message="tns:RandevuEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RandevuFiltrele">
+      <wsdl:input message="tns:RandevuFiltreleSoapIn" />
+      <wsdl:output message="tns:RandevuFiltreleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RandevuGuncelle">
+      <wsdl:input message="tns:RandevuGuncelleSoapIn" />
+      <wsdl:output message="tns:RandevuGuncelleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RandevuSil">
+      <wsdl:input message="tns:RandevuSilSoapIn" />
+      <wsdl:output message="tns:RandevuSilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="hekimata">
+      <wsdl:input message="tns:hekimataSoapIn" />
+      <wsdl:output message="tns:hekimataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RandevuIslemleriSoap" type="tns:RandevuIslemleriSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RandevuListele">
+      <soap:operation soapAction="http://tempuri.org/RandevuListele" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KisiGetir">
+      <soap:operation soapAction="http://tempuri.org/KisiGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandevuEkle">
+      <soap:operation soapAction="http://tempuri.org/RandevuEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandevuFiltrele">
+      <soap:operation soapAction="http://tempuri.org/RandevuFiltrele" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandevuGuncelle">
+      <soap:operation soapAction="http://tempuri.org/RandevuGuncelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandevuSil">
+      <soap:operation soapAction="http://tempuri.org/RandevuSil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hekimata">
+      <soap:operation soapAction="http://tempuri.org/hekimata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RandevuIslemleriSoap12" type="tns:RandevuIslemleriSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RandevuListele">
+      <soap12:operation soapAction="http://tempuri.org/RandevuListele" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KisiGetir">
+      <soap12:operation soapAction="http://tempuri.org/KisiGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandevuEkle">
+      <soap12:operation soapAction="http://tempuri.org/RandevuEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandevuFiltrele">
+      <soap12:operation soapAction="http://tempuri.org/RandevuFiltrele" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandevuGuncelle">
+      <soap12:operation soapAction="http://tempuri.org/RandevuGuncelle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandevuSil">
+      <soap12:operation soapAction="http://tempuri.org/RandevuSil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hekimata">
+      <soap12:operation soapAction="http://tempuri.org/hekimata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RandevuIslemleri">
+    <wsdl:port name="RandevuIslemleriSoap" binding="tns:RandevuIslemleriSoap">
+      <soap:address location="http://localhost:65390/RandevuIslemleri.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RandevuIslemleriSoap12" binding="tns:RandevuIslemleriSoap12">
+      <soap12:address location="http://localhost:65390/RandevuIslemleri.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

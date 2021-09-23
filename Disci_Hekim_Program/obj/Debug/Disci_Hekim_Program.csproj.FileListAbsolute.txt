@@ -1,0 +1,33 @@
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\bin\Debug\Disci_Hekim_Program.exe.config
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\bin\Debug\Disci_Hekim_Program.exe
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\bin\Debug\Disci_Hekim_Program.pdb
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.Form1.resources
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.Properties.Resources.resources
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.csproj.GenerateResource.Cache
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.exe
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.pdb
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.Resepsiyon.resources
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.HekimEkran.resources
+c:\users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.SifremiUnuttum.resources
+C:\Users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.HizmetIslemleriEkran.resources
+C:\Users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.HekimIslemleriEkran.resources
+C:\Users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.HastaIslemleriEkran.resources
+C:\Users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\bin\Debug\itextsharp.dll
+C:\Users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.FaturaIslemleri.resources
+C:\Users\issac\documents\visual studio 2013\Projects\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.csprojResolveAssemblyReference.cache
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\bin\Debug\Disci_Hekim_Program.exe.config
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.exe
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.pdb
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\bin\Debug\Disci_Hekim_Program.exe
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\bin\Debug\Disci_Hekim_Program.pdb
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.csprojResolveAssemblyReference.cache
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.FaturaIslemleri.resources
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.Form1.resources
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.HastaIslemleriEkran.resources
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.HekimEkran.resources
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.HekimIslemleriEkran.resources
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.HizmetIslemleriEkran.resources
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.Properties.Resources.resources
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.Resepsiyon.resources
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.SifremiUnuttum.resources
+C:\Users\Muhammed\Desktop\DişçiProje\Disci_Hekim_Program\Disci_Hekim_Program\obj\Debug\Disci_Hekim_Program.csproj.GenerateResource.Cache

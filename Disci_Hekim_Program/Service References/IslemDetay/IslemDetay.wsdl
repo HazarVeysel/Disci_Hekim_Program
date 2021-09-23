@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IslemDetayEkle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="islemid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="islemadi" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="birimfiyat" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="adet" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IslemDetayEkleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="islemdetaylisteleID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="islemid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="islemdetaylisteleIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="islemdetaylisteleIDResult" type="tns:ArrayOfIslemDetaylari" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIslemDetaylari">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IslemDetaylari" nillable="true" type="tns:IslemDetaylari" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IslemDetaylari">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IslemAdi" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Adet" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirimFiyat" nillable="true" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IslemDetayEkleSoapIn">
+    <wsdl:part name="parameters" element="tns:IslemDetayEkle" />
+  </wsdl:message>
+  <wsdl:message name="IslemDetayEkleSoapOut">
+    <wsdl:part name="parameters" element="tns:IslemDetayEkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="islemdetaylisteleIDSoapIn">
+    <wsdl:part name="parameters" element="tns:islemdetaylisteleID" />
+  </wsdl:message>
+  <wsdl:message name="islemdetaylisteleIDSoapOut">
+    <wsdl:part name="parameters" element="tns:islemdetaylisteleIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IslemDetaySoap">
+    <wsdl:operation name="IslemDetayEkle">
+      <wsdl:input message="tns:IslemDetayEkleSoapIn" />
+      <wsdl:output message="tns:IslemDetayEkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="islemdetaylisteleID">
+      <wsdl:input message="tns:islemdetaylisteleIDSoapIn" />
+      <wsdl:output message="tns:islemdetaylisteleIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IslemDetaySoap" type="tns:IslemDetaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IslemDetayEkle">
+      <soap:operation soapAction="http://tempuri.org/IslemDetayEkle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="islemdetaylisteleID">
+      <soap:operation soapAction="http://tempuri.org/islemdetaylisteleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IslemDetaySoap12" type="tns:IslemDetaySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IslemDetayEkle">
+      <soap12:operation soapAction="http://tempuri.org/IslemDetayEkle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="islemdetaylisteleID">
+      <soap12:operation soapAction="http://tempuri.org/islemdetaylisteleID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IslemDetay">
+    <wsdl:port name="IslemDetaySoap" binding="tns:IslemDetaySoap">
+      <soap:address location="http://localhost:65390/IslemDetay.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IslemDetaySoap12" binding="tns:IslemDetaySoap12">
+      <soap12:address location="http://localhost:65390/IslemDetay.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
